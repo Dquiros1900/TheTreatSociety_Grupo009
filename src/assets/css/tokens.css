@@ -1,0 +1,50 @@
+:root{
+    /* Colores base */
+--color-primario-1: #A17C61;
+--color-primario-2: #D7C1AC;
+--color-primario-3: #E8DBCF;
+
+/* Colores de acento */
+--color-acento-1: #363D2B;
+--color-acento-2: #955532;
+
+/* Colores secundarios */
+--color-secundario-1: #f5ece6;
+--color-secundario-2: #CA8762;
+--color-secundario-3: #BC6943;
+--color-secundario-4: #6A7854;
+--color-secundario-5: #724029;
+
+/* Escala de grises */
+--color-gris-claro: #E5E2DF;
+--color-gris-medio: #999795;
+--color-gris-oscuro: #4D4B4A;
+
+/*==== CROMATICA APLICADA====*/
+
+/* Fondo */
+--color-fondo: var(--color-gris-claro);
+--color-fondo-superficie: var(--color-primario-3);
+--color-fondo-overlay: rgba(46, 44, 39, 0.6); /* única excepción por transparencia */
+--color-fondo-encabezados: var(--color-acento-1);
+
+/* Borde */
+--color-borde-default: var(--color-secundario-4);
+--color-borde-highlighted: var(--color-acento-2);
+
+/* Texto */
+--color-texto: var(--color-primario-1);
+--color-texto-titulo: var(--color-acento-1);
+--color-texto-claro: var(--color-gris-medio);
+--color-texto-contraste: var(--color-gris-claro);
+
+/* Estado */
+--color-estado-info: var(--color-primario-1);
+--color-estado-alerta: var(--color-secundario-3);
+--color-estado-exito: var(--color-secundario-4);
+--color-estado-error: var(--color-secundario-5);
+--color-estado-hover: var(--color-acento-2);
+--color-estado-on: var(--color-acento-1);
+--color-estado-focus: var(--color-secundario-4);
+--color-estado-disabled: var(--color-secundario-1);
+}

@@ -1,0 +1,182 @@
+/*===== LOGIN =====*/
+.wireframe{
+    background-color: white;
+    border: 2px black solid;
+}
+
+.mainLogin {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    gap:24px;
+    padding: 24px;
+}
+
+.login{
+    width: 30%;
+    height: 50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:16px;
+}
+
+.slider{
+    width:70%;
+    height: 100vh;
+}
+
+/*LAYOUT BÁSICO DE LAS VISTAS CON SIDEBAR*/
+
+.contenedorPrincipal{
+    display: flex;
+    height: 100vh;
+    gap: 24px;
+}
+.sideBar{
+    height:100vh;
+    width: 10%;
+}
+
+.contenido{
+    height: 100%;
+    width: 90%;
+    display:flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.encabezado{
+    height: 10%;
+}
+
+.encabezado h1{
+    text-align: center;
+}
+
+
+.tablaControl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+/*===== FORMULARIO DE REGISTRO DE PEDIDO =====*/
+
+#formularioRegistro{
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 35px;
+
+}
+
+#formularioRegistro input, #formularioRegistro select, #formularioRegistro textarea{
+    width: 100%;
+}
+
+.agrupadorEntrada{
+    display: flex;
+    flex-direction: column;
+}
+
+.agrupadorBoton{
+    display:flex;
+    justify-content: center;
+}
+
+/*===== TABLERO PEDIDOS =====*/
+.tablero{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.formularioBuscador{
+    margin: 40px 0 40px 0;
+    width: 60%;
+    
+}
+
+.formularioBuscador input{
+    width:100%;
+   
+}
+
+.contornoTablero{
+    display:flex;
+    width:100%;
+    flex-grow: 1;
+    gap: 8px;
+}
+
+.columnaEstado{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.parrafoEstado{
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.zonaTarjetas{
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.tarjetaPedido{
+    width: 80%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    padding: 8px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.botonesFlecha{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.editarPedido{
+    margin-bottom:10px;
+}
+
+/*===== TABLA INVENTARIO =====*/
+
+.accionesInventario{
+    padding: 25px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+}
+
+.tablaInventario{
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.tablaInventario th, .tablaInventario td{
+    border: 2px solid black;
+    text-align: center;
+}
+
+.botonAcciones{
+    min-width: 120px;
+    padding: 8px;
+}
+
+.paginacion{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
