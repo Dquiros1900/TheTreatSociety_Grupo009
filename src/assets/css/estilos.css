@@ -201,6 +201,7 @@ select:invalid {
     border-bottom: var(--border-style-acento);
     padding-bottom: var(--spacing-0-5x);
     text-align: center;
+    font-family: var(--font-family-body);
 }
 
 .tarjetaPedido .botonSecundario,
