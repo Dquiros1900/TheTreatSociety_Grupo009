@@ -46,6 +46,7 @@
   --color-texto-secundario: var(--color-gris-scuro);
   --color-texto-contraste: var(--color-blanco-contraste);
   --color-texto-seleccionado: var(--color-acento-2);
+  --color-texto-activo:var(--color-primario-2);
 
   /* Estado */
   --color-estado-info: var(--color-secundario-1);
@@ -57,6 +58,7 @@
   --color-interaccion-hover-primario: var(--color-secundario-1);
   --color-interaccion-hover-secundario: var(--color-acento-1);
   --color-interaccion-deshabilitado: var(--color-gris-medioClaro);
+  --color-interaccion-activo: var(--color-primario-1);
 
 
   /*Botones*/

@@ -8,7 +8,7 @@
                 </div>    
                  <div class = "contenedorUsuario">
                     <img src="@/assets/img/empleada.png" alt="">
-                    <p>Daniel Quirós</p>
+                    <p>Fabiana Mendoza</p>
                 </div>
                 <form action="" class = "buscadorSideBar">
                     <input type="search" id = "buscarSideBar" placeholder="Buscar">

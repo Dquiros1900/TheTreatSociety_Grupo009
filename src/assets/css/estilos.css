@@ -284,9 +284,10 @@ select:invalid {
 }
 
 .nav-item.active {
-    background-color: var(--color-fondo-navegacion);
-    color: var(--color-texto-seleccionado);
+    background-color: var(--color-interaccion-activo);
+    color: var(--color-texto-activo);
     font-weight: bold;
+    border-left: var(--color-acento-2) 2px solid;
 }
 
 .buscadorSideBar input{
@@ -320,6 +321,7 @@ select:invalid {
   background-color: var(--color-fondo-superficie);
   border-radius: 50%;
   object-fit: cover;
+  margin-left:2.1875rem;
 }
 
 .sidebar-bottom{
