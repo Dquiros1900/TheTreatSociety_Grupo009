@@ -1,44 +1,60 @@
-# TheTreatSociety_Grupo009
+# 🐾 The Treat Society - Admin Dashboard
 
-This template should help get you started developing with Vue 3 in Vite.
+**The Treat Society** es un panel de administración integral diseñado para optimizar la gestión de pedidos e inventario de una marca premium de snacks para mascotas. Este proyecto combina una estética orgánica y acogedora con la eficiencia de una herramienta de gestión profesional.
 
-## Recommended IDE Setup
+## 🚀 Vista Previa del Proyecto
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### 1. Formulario de Registro de Pedidos
+Interfaz diseñada para la captura de datos sin errores. El uso de fondos en blanco cálido (`#FFF6E8`) sobre el verde menta suave reduce la fatiga visual del administrador.
 
-## Recommended Browser Setup
+### 2. Gestión de Inventario y Tablero de Control
+Implementación de un sistema de columnas tipo Kanban para el seguimiento de estados ("En Armado", "Listo", etc.).
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+### 3. Sidebar Dinámico y Centrado
+Nuestra barra lateral es el corazón de la navegación, con un perfil de usuario perfectamente centrado y estados activos de alta legibilidad.
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 🎨 Decisiones de Diseño (UI/UX)
 
-## Project Setup
+Como experto en interfaces, este proyecto se rige por tres pilares fundamentales:
 
-```sh
-npm install
-```
+* **Tipografía Estratégica:** * **Fraunces:** Utilizada exclusivamente para branding y títulos de alto nivel para mantener la personalidad artesanal de la marca.
+    * **Nunito:** Implementada en toda la interfaz de usuario, tablas y formularios para garantizar una lectura rápida y clara de los datos.
+* **Psicología del Color:** * **Verde Bosque:** Transmite confianza y naturaleza.
+    * **Blanco Vainilla (#FFF6E8):** Elegido para los contenedores principales para evocar ingredientes naturales y orgánicos, evitando el blanco "clínico" que cansa la vista.
+    * **Acento Activo (#FFD48F):** Un tono mostaza suave que resalta los elementos interactivos sin ser agresivo.
+* **Accesibilidad en Navegación:** El estado activo del menú utiliza una combinación de **fuente en negrita**, cambio de color a **#FFD48F** y un **borde lateral de 4px**, asegurando que el usuario siempre sepa dónde está ubicado.
 
-### Compile and Hot-Reload for Development
+---
 
-```sh
-npm run dev
-```
+## 🛠️ Especificaciones Técnicas
 
-### Compile and Minify for Production
+* **HTML5 Semántico:** Uso de etiquetas correctas para accesibilidad y SEO.
+* **CSS3 Moderno:**
+    * **CSS Variables:** Gestión centralizada de colores y espaciado (`:root`).
+    * **Flexbox:** Layout dinámico y adaptativo.
+    * **Box-Sizing:** Control total del modelo de caja para evitar desbordamientos.
+    * **Layout Adaptable:** Alturas calculadas con `calc(100vh - spacing)` para un ajuste perfecto a la pantalla.
 
-```sh
-npm run build
-```
+## 📂 Estructura del Proyecto
 
-### Lint with [ESLint](https://eslint.org/)
+- `index.html` - Estructura principal del dashboard.
+- `estilos.css` - Estilos globales, variables y componentes (Sidebar, Botones, Inputs).
+- `layout.css` - Definición de la estructura de la cuadrícula y posicionamiento.
+- `tokens.css` - Estandarización del diseño de estilos por medio de :root.
+- `/assets` - Logo (SVG), imágenes de perfil e íconos
 
-```sh
-npm run lint
-```
+---
+
+## 💻 Instrucciones para Desarrolladores
+
+Si deseas replicar o mejorar este proyecto:
+
+1. Clona el repositorio.
+2. Asegúrate de tener las fuentes **Fraunces** y **Nunito** vinculadas desde Google Fonts.
+3. El sistema de espaciado es modular a través de variables para facilitar cambios globales de diseño.
+4. Instale npm y corra el archivo con npm run dev
+
+---
+*Desarrollado con ❤️ para The Treat Society.*
