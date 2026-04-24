@@ -1,62 +1,56 @@
 /*===== LOGIN =====*/
-.wireframe{
-    background-color: white;
-    border: 2px black solid;
-}
 
 .mainLogin {
     height: 100vh;
     display: flex;
     align-items: center;
-    gap:24px;
-    padding: 24px;
+    gap: var(--spacing-1x);
+    padding: var(--spacing-1x);
 }
 
-.login{
+.login {
     width: 30%;
     height: 50%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    gap:16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-0-75x);
 }
 
-.slider{
-    width:70%;
+.slider {
+    width: 70%;
     height: 100vh;
 }
 
-/*LAYOUT BÁSICO DE LAS VISTAS CON SIDEBAR*/
-
-.contenedorPrincipal{
+/*===== LAYOUT BÁSICO DE LAS VISTAS CON SIDEBAR =====*/
+.contenedorPrincipal {
     display: flex;
     height: 100vh;
-    gap: 24px;
-}
-.sideBar{
-    height:100vh;
-    width: 10%;
+    /*gap: var(--spacing-1x);*/
 }
 
-.contenido{
-    height: 100%;
-    width: 90%;
-    display:flex;
+.sideBar {
+    width: 15%;
+    margin: var(--spacing-1x); /* Separación de los bordes de la ventana */
+    border-radius: var(--border-radius-medium);
+    height: calc(100vh - var(--spacing-2x)); /* Ajuste de altura */
+    display: flex;
     flex-direction: column;
-    gap: 16px;
+    justify-content: space-between;
+    padding: var(--spacing-0-5x);
 }
 
-.encabezado{
-    height: 10%;
+.contenido {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-1x) var(--spacing-1x) var(--spacing-1x) 0;
+    gap: var(--spacing-1x); /* Espacio entre el Header flotante y el Tablero */
 }
 
-.encabezado h1{
-    text-align: center;
-}
 
-
-.tablaControl{
+.tablaControl {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,118 +59,74 @@
 
 /*===== FORMULARIO DE REGISTRO DE PEDIDO =====*/
 
-#formularioRegistro{
-    display:flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 35px;
-
-}
-
-#formularioRegistro input, #formularioRegistro select, #formularioRegistro textarea{
-    width: 100%;
-}
-
-.agrupadorEntrada{
+.agrupadorEntrada {
     display: flex;
     flex-direction: column;
 }
 
-.agrupadorBoton{
-    display:flex;
+.agrupadorBoton {
+    display: flex;
     justify-content: center;
+    gap: var(--spacing-1x); /* Agregado para separar botones */
 }
 
 /*===== TABLERO PEDIDOS =====*/
-.tablero{
+.tablero {
+    display: flex; /* Faltaba para que el flex-direction funcione */
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
 }
-.formularioBuscador{
-    margin: 40px 0 40px 0;
+
+.formularioBuscador {
+    margin: var(--spacing-2x) 0;
     width: 60%;
-    
 }
 
-.formularioBuscador input{
-    width:100%;
-   
-}
-
-.contornoTablero{
-    display:flex;
-    width:100%;
+.contornoTablero {
+    display: flex;
+    width: 100%;
     flex-grow: 1;
-    gap: 8px;
+    gap: var(--spacing-0-33x);
 }
 
-.columnaEstado{
+.columnaEstado {
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
-.parrafoEstado{
-    text-align: center;
-    border-bottom: 2px solid black;
-}
 
-.zonaTarjetas{
+.zonaTarjetas {
     flex-grow: 1;
     overflow-y: auto;
 }
 
-.tarjetaPedido{
-    width: 80%;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid black;
-    padding: 8px;
-    margin: 10px auto;
-    text-align: center;
-}
 
-.botonesFlecha{
-    width: 70%;
+.botonesFlecha {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: var(--spacing-0-75x);
 }
 
-.editarPedido{
-    margin-bottom:10px;
-}
 
 /*===== TABLA INVENTARIO =====*/
-
-.accionesInventario{
-    padding: 25px;
+.accionesInventario {
+    padding: var(--spacing-1x);
     display: flex;
-    gap: 12px;
+    gap: var(--spacing-0-5x);
     justify-content: center;
-    margin: 20px 0 20px 0;
+    margin: var(--spacing-1x) 0;
 }
 
-.tablaInventario{
-    width: 80%;
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-1x);
+    padding: var(--spacing-1x) 0; 
     margin: 0 auto;
-    border-collapse: collapse;
-}
-
-.tablaInventario th, .tablaInventario td{
-    border: 2px solid black;
-    text-align: center;
-}
-
-.botonAcciones{
-    min-width: 120px;
-    padding: 8px;
-}
-
-.paginacion{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+    width: fit-content; 
+    background: transparent;
 }

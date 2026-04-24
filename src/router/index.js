@@ -5,6 +5,7 @@ import login from '../views/login.vue'
 import RegistroPedidos from '../views/RegistroPedidos.vue'
 import TablaInventario from '../views/TablaInventario.vue'
 import TableroPedidos from '../views/TableroPedidos.vue'
+import guiaEstilo from '../views/guiaEstilo.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,7 +28,12 @@ const router = createRouter({
     {
       path: '/TableroPedidos',
       name: 'TableroPedidos',
-      component: TableroPedidos
+      component: TableroPedidos,
+    },
+    {
+      path: '/guiaEstilo',
+      name: 'guiaEstilo',
+      component: guiaEstilo,
     }
   ],
 })

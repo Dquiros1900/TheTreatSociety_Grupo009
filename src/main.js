@@ -6,7 +6,7 @@ import router from './router'
 
 import './assets/css/layout.css'
 import './assets/css/tokens.css'
-
+import './assets/css/estilos.css'
 
 const app = createApp(App)
 

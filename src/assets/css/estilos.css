@@ -1,0 +1,408 @@
+/* =========================================
+   1. ESCENARIOS TIPOGRÁFICOS
+========================================= */
+
+h1 {
+  font-family: var(--font-family-titles);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-h1);
+  line-height: var(--font-line-height-title);
+  color: var(--color-texto-contraste);
+  margin: var(--spacing-1x) 0 var(--spacing-1x) 0;
+  text-align: center;
+}
+
+h2 {
+  font-family: var(--font-family-titles);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-h2);     
+  line-height: var(--font-line-height-title);
+  color: var(--color-texto-principal);
+  margin: 0 0 var(--spacing-0-75x) 0;
+}
+
+h3 {
+  font-family: var(--font-family-titles);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-h3);
+  line-height: var(--font-line-height-title);
+  color: var(--color-texto-principal);
+  margin: 0 0 var(--spacing-0-5x) 0;
+}
+
+.body {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  line-height: var(--font-line-height-body);
+  color: var(--color-texto-principal);
+}
+
+.caption {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-caption);
+  line-height: var(--font-line-height-caption);
+  color: var(--color-texto-secundario);
+}
+
+/* =========================================
+   2. COMPONENTES: Formularios e Inputs
+========================================= */
+
+#formularioRegistro {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-0-5x);
+    padding: var(--spacing-2x);
+    background-color: var(--color-blanco-contraste);
+    border-radius: var(--border-radius-small);
+}
+
+label {
+  font-family: var(--font-family-titles);
+  font-size: var(--font-size-body); 
+  font-weight: var(--font-weight-h3); 
+  line-height: var(--font-line-height-title);
+  color: var(--color-texto-principal);
+}
+
+input, select, textarea {
+    width: 100%;
+    border: none;
+    border-bottom: var(--border-style-default);
+    background-color: transparent;
+
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-body);
+    line-height: var(--font-line-height-body);
+    color: var(--color-texto-principal);
+}
+
+input, select {
+    height: 2.5rem;
+}
+
+textarea {
+    resize: vertical; /* Permite al usuario agrandar solo hacia abajo */
+    padding-top: var(--spacing-0-5x); /* Para que el texto no pegue arriba */
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--color-texto-primario);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-bottom: var(--border-style-acento);
+}
+
+select:invalid {
+  color: var(--color-texto-secundario);
+}
+
+/* =========================================
+   3. COMPONENTES: Botones
+========================================= */
+
+.botonPrimario {
+    height: var(--button-primary);
+    width: auto;
+
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-h2);
+    color: var(--color-texto-contraste);
+
+    background-color: var(--color-botones-sinInteraccion); 
+    border: none;
+    border-radius: var(--border-radius-small);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-0-33x); 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botonPrimario:hover {
+    background-color: var(--color-interaccion-hover-primario);
+}
+
+.botonSecundario {
+    height: var(--button-primary);
+    width: auto;
+
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-h2);
+    color: var(--color-botones-sinInteraccion);
+
+    background-color: transparent;
+    border: var(--border-style-acento); 
+    border-radius: var(--border-radius-small);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-0-33x);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botonSecundario:hover {
+    background-color: var(--color-interaccion-hover-secundario);
+    color: var(--color-blanco-contraste)
+}
+
+.editarPedido {
+    min-width: 120px;
+    padding: var(--spacing-0-33x);
+    
+}
+
+.cambioEstado {
+    width: var(--button-small);
+    height: var(--button-small);
+    flex-shrink: 0; /* IMPRESCINDIBLE: Evita que el botón se comprima o estire */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-size: var(--font-size-body); 
+}
+
+.botonAcciones {
+    min-width: 7.5rem;
+    padding: var(--spacing-0-33x);
+}
+
+
+/* =========================================
+   4. COMPONENTES: Tablero de Pedidos
+========================================= */
+.tarjetaPedido {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-0-5x);
+    padding: var(--spacing-0-75x) var(--spacing-0-5x);
+    margin: var(--spacing-0-5x) auto;
+    text-align: center;
+    background-color: var(--color-fondo-superficie);
+    border: var(--border-style-default);
+    border-radius: var(--border-radius-large);
+}
+
+.parrafoEstado {
+    border-bottom: var(--border-style-acento);
+    padding-bottom: var(--spacing-0-5x);
+    text-align: center;
+}
+
+.tarjetaPedido .botonSecundario,
+.tarjetaPedido .botonPrimario,
+.tarjetaPedido .cambioEstado {
+    height: var(--button-small); /* Y aquí también */
+    font-size: var(--font-size-caption); 
+}
+
+/* =========================================
+   5. COMPONENTES: Tablas
+========================================= */
+
+.tablaInventario {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: var(--border-style-acento);
+}
+
+.tablaInventario th {
+  background-color: var(--color-fondo-thead);
+  padding: var(--spacing-0-5x);
+  text-align: center;
+  font-family: var(--font-family-titles);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-h2);
+  color: var(--color-texto-contraste);
+  border: var(--border-style-default)
+}
+
+
+.tablaInventario tr {
+  border-bottom: var(--border-style-acento);
+}
+
+.tablaInventario td {
+  padding: var(--spacing-0-5x);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-body);
+  color: var(--color-texto-principal);
+  text-align: center;
+  border: var(--border-style-acento)
+}
+
+/* =========================================
+  6.COMPONENTES: SIDEBAR
+======================================== */
+
+.sideBar{
+  background-color: var(--color-fondo-navegacion);
+}
+
+.sidebar-logo img {
+    width: 100%;
+    margin-bottom: var(--spacing-2x);
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1x);
+    flex-grow: 1;
+    justify-content: center;
+    margin: var(--spacing-2x) 0;
+}
+
+.nav-item {
+    color: var(--color-texto-contraste);
+    text-decoration: none;
+    padding: var(--spacing-0-75x);
+    border-radius: var(--border-radius-small);
+    font-family: var(--font-family-body);
+    transition: all 0.3s ease;
+    display: block;
+    text-align: center;
+}
+
+.nav-item:hover {
+    background-color: var(--color-interaccion-hover-primario);
+}
+
+.nav-item.active {
+    background-color: var(--color-fondo-navegacion);
+    color: var(--color-texto-seleccionado);
+    font-weight: bold;
+}
+
+.buscadorSideBar input{
+  background-color: var(--color-blanco-contraste);
+  margin: var(--spacing-1x) 0;
+  padding: var(--spacing-0-5x) var(--spacing-1x);
+  border-radius: var(--border-radius-small);
+}
+
+.contenedorUsuario{
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family-body);
+  color: var(--color-texto-contraste);
+  margin-bottom: var(--spacing-1-5x);
+  gap: var(--spacing-1x);
+  padding-bottom: var(--spacing-1x);
+  border-bottom: var(--border-style-sutil);
+}
+
+.contenedorUsuario p{
+  flex-grow: 1;
+  text-align: center;
+  margin: 0 2.5rem 0 0;
+  line-height: 1.2;
+}
+
+.contenedorUsuario img{
+  width: 3rem; /*Se deben de cambiar esos valores fijos*/
+  height: 3rem;
+  background-color: var(--color-fondo-superficie);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sidebar-bottom{
+  border-top: var(--border-style-acento);
+  display: flex;
+  padding-top: var(--spacing-0-5x);
+}
+
+.buscadorSideBar{
+  margin-bottom: var(--spacing-2x);
+}
+
+.btn-logout{
+  margin: 0 auto;
+  width:100%;
+}
+
+
+
+/* =========================================
+   7. GUÍA DE ESTILOS Y UTILIDADES
+========================================= */
+
+.colorSwatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1x);
+  margin: var(--spacing-1x) 0;
+}
+
+.colorChip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-0-33x) var(--spacing-0-75x);
+  border-radius: var(--border-radius-pill) !important;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-h2);
+}
+
+.colorChip span {
+  color: var(--color-texto-contraste);
+}
+
+.guiaEstilo{
+  background-color: white;
+}
+
+
+
+/* =========================================
+   8. Contenedores
+========================================= */
+body{
+  background-color: var(--color-fondo-general);
+}
+.contenedorPrincipal{
+  background-color: var( --color-fondo-general);
+}
+
+.contenido{
+  background-color: var( --color-fondo-general);
+}
+
+.tablaControl{
+  background-color: var( --color-fondo-general);
+}
+
+
+.header{
+  background-color: var(--color-fondo-navegacion); /* El mismo verde del sidebar */
+  color: var(--color-texto-contraste);
+  border-radius: var(--border-radius-medium);
+  border-bottom: solid 3px var(--color-acento-2);
+  display: flex;
+  justify-content: center;
+}
+
+.header img{
+  width:5%;
+  background-color: var(icon-color-default);
+  padding: var(--icon-padding);
+}
+
+

@@ -1,50 +1,138 @@
-:root{
-    /* Colores base */
---color-primario-1: #A17C61;
---color-primario-2: #D7C1AC;
---color-primario-3: #E8DBCF;
+:root {
+  /* ===== 1. CROMÁTICA ===== */
+  
+  /* Colores base */
+  --color-primario-1: #003118;
+  --color-primario-2: #FFD48F;
+  --color-primario-3: #DCF9EA;
 
-/* Colores de acento */
---color-acento-1: #363D2B;
---color-acento-2: #955532;
+  /* Colores de acento */
+  --color-acento-1: #359364;
+  --color-acento-2: #FFB031;
 
-/* Colores secundarios */
---color-secundario-1: #f5ece6;
---color-secundario-2: #CA8762;
---color-secundario-3: #BC6943;
---color-secundario-4: #6A7854;
---color-secundario-5: #724029;
+  /* Colores secundarios */
+  --color-secundario-1: #006331;
+  --color-secundario-2: #5AFAAA;
+  --color-secundario-3: #B71C1C;
+  --color-secundario-4: #CCAA72;
+  --color-secundario-5: #CC8D27;
 
-/* Escala de grises */
---color-gris-claro: #E5E2DF;
---color-gris-medio: #999795;
---color-gris-oscuro: #4D4B4A;
+  /* Escala de grises */
+  --color-gris-claro: #CBE5D8;
+  --color-gris-medioClaro: #9EB2A8;
+  --color-gris-oscuro: #718078;
+  --color-gris-muyOscuro: #171A18;
+  --color-gris-relieve: rgba(255, 255, 255, 0.15);/*Excepción por opacidad, color para dar sensación de relieve*/
 
-/*==== CROMATICA APLICADA====*/
+  /* Color contraste fondos oscuros */
+  --color-blanco-contraste: #FFF6E8;
 
-/* Fondo */
---color-fondo: var(--color-gris-claro);
---color-fondo-superficie: var(--color-primario-3);
---color-fondo-overlay: rgba(46, 44, 39, 0.6); /* única excepción por transparencia */
---color-fondo-encabezados: var(--color-acento-1);
+  /* ----- Cromática Aplicada ----- */
+  
+  /* Fondo */
+  --color-fondo-general: var(--color-gris-claro);
+  --color-fondo-superficie: var(--color-primario-3);
+  --color-fondo-navegacion: var(--color-primario-1);
+  --color-fondo-thead: var(--color-acento-1);
+  --color-fondo-overlay: rgba(23, 26, 22, 0.6); /*excepción por transparencia */
 
-/* Borde */
---color-borde-default: var(--color-secundario-4);
---color-borde-highlighted: var(--color-acento-2);
+  /* Borde */
+  --color-borde-default: var(--color-gris-medioClaro);
+  --color-borde-acento: var(--color-acento-1);
+  --color-borde-sutil: var(--color-gris-relieve);
 
-/* Texto */
---color-texto: var(--color-primario-1);
---color-texto-titulo: var(--color-acento-1);
---color-texto-claro: var(--color-gris-medio);
---color-texto-contraste: var(--color-gris-claro);
+  /* Texto */
+  --color-texto-principal: var(--color-gris-muyOscuro);
+  --color-texto-secundario: var(--color-gris-scuro);
+  --color-texto-contraste: var(--color-blanco-contraste);
+  --color-texto-seleccionado: var(--color-acento-2);
 
-/* Estado */
---color-estado-info: var(--color-primario-1);
---color-estado-alerta: var(--color-secundario-3);
---color-estado-exito: var(--color-secundario-4);
---color-estado-error: var(--color-secundario-5);
---color-estado-hover: var(--color-acento-2);
---color-estado-on: var(--color-acento-1);
---color-estado-focus: var(--color-secundario-4);
---color-estado-disabled: var(--color-secundario-1);
+  /* Estado */
+  --color-estado-info: var(--color-secundario-1);
+  --color-estado-alerta: var(--color-secundario-5);
+  --color-estado-exito: var(--color-acento-1);
+  --color-estado-error: var(--color-secundario-3);
+
+  /* Interacción */
+  --color-interaccion-hover-primario: var(--color-secundario-1);
+  --color-interaccion-hover-secundario: var(--color-acento-1);
+  --color-interaccion-deshabilitado: var(--color-gris-medioClaro);
+
+
+  /*Botones*/
+  --color-botones-sinInteraccion: var(--color-acento-1);
+
+  /* ===== 2. TIPOGRAFÍA ===== */
+  
+  /* Familia tipográfica */
+  --font-family-titles: 'Fraunces', serif;
+  --font-family-body: 'Nunito', sans-serif; 
+
+  /* Interlineado */
+  --font-line-height-title: 1.2;
+  --font-line-height-body: 1.5;
+  --font-line-height-caption: 1.6;
+
+  /* Tamaño */
+  --font-size-h1: 3rem;         /* 48px */
+  --font-size-h2: 2rem;         /* 32px */
+  --font-size-h3: 1.5rem;       /* 24px */    
+  --font-size-body: 1rem;       /* 16px */
+  --font-size-caption: 0.75rem; /* 12px */
+
+  /* Peso */
+  --font-weight-h1: 700;
+  --font-weight-h2: 600;
+  --font-weight-h3: 500;
+  --font-weight-body: 400;
+  --font-weight-caption: 300;
+
+  /* ===== 3. ESPACIADO ===== */
+  
+  /* Sistema de espaciado base */
+  --spacing-base: 24px;
+
+  /* Escalas relativas */
+  --spacing-2x: calc(var(--spacing-base) * 2);       /* 48px */
+  --spacing-1-5x: calc(var(--spacing-base) * 1.5);   /* 36px */
+  --spacing-1x: calc(var(--spacing-base) * 1);       /* 24px */
+  --spacing-0-75x: calc(var(--spacing-base) * 0.75); /* 18px */
+  --spacing-0-5x: calc(var(--spacing-base) * 0.5);   /* 12px */
+  --spacing-0-33x: calc(var(--spacing-base) / 3);    /* 8px */
+
+  /* ===== 4. BORDES ===== */
+  
+  /* Grosor del borde */
+  --border-weight-default: 1px;
+  --border-weight-acento: 2px; 
+
+  /* Estilos del borde */
+  --border-style-default: var(--border-weight-default) solid var(--color-borde-default);
+  --border-style-acento: var(--border-weight-acento) solid var(--color-borde-acento);
+  --border-style-sutil: var(--border-weight-default) solid var(--color-borde-sutil);
+
+  /* Radio del borde (Border Radius) */
+  --border-radius-small: 8px;  /* inputs y botones */
+  --border-radius-large: 16px; /* tarjetas (cards) y modales */
+  --border-radius-pill: 999px; /* botones muy redondeados o etiquetas */
+
+  /* ===== 5. ÍCONOS ===== */
+  
+  /* Tamaños de ícono */
+  --icon-size-small: 16px;
+  --icon-size-medium: 24px;
+  --icon-size-large: 32px;
+
+  /* Colores de ícono */
+  --icon-color-default: var(--color-acento-1); 
+  --icon-color-disabled: var(--color-interaccion-deshabilitado);
+
+  /* Padding del ícono */
+  --icon-padding: var(--spacing-0-5x);
+
+  /* ===== 6. OTROS ===== */
+  
+  /* Altura de componentes */
+  --button-primary: 40px;
+  --button-small: 36px;
 }
